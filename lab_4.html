@@ -35,7 +35,7 @@
                 <!-- 4a must be a form -->
                 <form name = "textTester">
                     <label for = "textTester">Test Tester: </label>
-                    <input type = "text" id = "text">
+                    <input type = "text" id = "textTester">
                     <!-- 4b must have a button called "Validate Text" -->
                     <button onclick = "validateText()">Validate Text</button>
                 </form>
@@ -61,9 +61,15 @@
                 }
             }
 
-            //
+            // 4c when button clicked it should validate that the text has no special characters
             function validateText(){
-                
+                var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                if (validation.test(document.getElementById("textTester").value)){
+                    alert("There is a special character!");
+                }
+                else{
+                    alert("You're good!")
+                }
             }
         </script>
 
