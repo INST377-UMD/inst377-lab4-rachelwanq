@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>INST377 - Lab 4</title>
+    </head>
+    <link rel = "stylesheet" href = "lab_4_style.css">
+
+    <body>
+        <!-- title -->
+        <header id="title">
+            <h1>INST377 - Lab 4</h1>
+        </header>
+
+        <!-- main containter -->
+        <div class = "mainContainer">
+            <!-- 2 ALERT ME SECTION -->
+            <div class = "section">
+                <!-- 2a there must be a form -->
+                <form name = "alertName">
+                    <label for = "name">Name: </label>
+                    <!-- 2b must take in a name, must be required to submit -->
+                    <input type = "text" id = "name" required>
+                    <!-- 2c the form should have a button called "Alert Me"-->
+                    <button onclick="hiName()">Alert Me</button>
+                </form>
+            </div>
+
+            <!-- CHANGE COLOR SECTION -->
+            <div class = "section">
+                <!-- 3a button called Change Color-->
+                <button onclick = "changeColor()">Change Color</button>       
+            </div>
+
+            <!-- TEXT TESTER SECTION -->
+            <div class = "section">
+                <!-- 4a must be a form -->
+                <form name = "textTester">
+                    <label for = "textTester">Test Tester: </label>
+                    <input type = "text" id = "text">
+                    <!-- 4b must have a button called "Validate Text" -->
+                    <button onclick = "validateText()">Validate Text</button>
+                </form>
+            </div>
+
+        </div>
+
+        <script type = "text/javascript">
+            // 2d when the "alert me" button is clicked it should take the inputted name and show an alert on the page saying "hi name!"
+            function hiName(){
+                console.log("Hi", document.alertName.name.value)
+                alert("Hi " + document.alertName.name.value + "!")
+            }
+
+            // 3b button must change the color of the page and alternate
+            function changeColor(){
+                // 3c page should stay the color that it swaps to
+                if (document.body.style.backgroundColor == "pink"){
+                    document.body.style.backgroundColor = "salmon";
+                }
+                else{
+                    document.body.style.backgroundColor = "pink";
+                }
+            }
+
+            //
+            function validateText(){
+                
+            }
+        </script>
+
+    </body>
+</html>
